@@ -1,0 +1,52 @@
+SELECT Titre 
+FROM livres;
+
+SELECT nom, Prenom
+FROM auteurs;
+
+SELECT titre
+FROM livres ORDER BY livres.DatesSortie;
+
+SELECT livres.titre, auteurs.Prenom
+FROM auteurs
+INNER JOIN livres ON auteurs.IdAuteurs = livres.auteurID;
+
+SELECT livres.titre, auteurs.Prenom
+FROM auteurs
+INNER JOIN livres ON auteurs.IdAuteurs = livres.auteurID GROUP BY auteurs.Prenom;
+
+SELECT livres.titre, auteurs.Prenom
+FROM auteurs
+INNER JOIN livres ON auteurs.IdAuteurs = livres.auteurID WHERE livres.Titre LIKE '%L%';
+
+SELECT livres.titre, auteurs.Prenom
+FROM auteurs
+INNER JOIN livres ON auteurs.IdAuteurs = livres.auteurID WHERE livres.DatesSortie > '2000-01-01';
+
+SELECT livres.titre, auteurs.Prenom
+FROM auteurs
+INNER JOIN livres ON auteurs.IdAuteurs = livres.auteurID WHERE auteurs.Prenom = 'Tolkien';
+
+SELECT livres.titre, auteurs.Prenom
+FROM auteurs
+INNER JOIN livres ON auteurs.IdAuteurs = livres.auteurID WHERE auteurs.Prenom LIKE '%T%';
+
+SELECT *
+From commandes
+
+SELECT commandes.IDCommande, utilisateurs.Nom, utilisateurs.Prenom
+FROM commandes
+INNER JOIN utilisateurs ON commandes.utilisateurID = utilisateurs.IDutilisateurs;
+
+SELECT commandes.IDCommande, utilisateurs.Nom, utilisateurs.Prenom
+FROM commandes
+INNER JOIN utilisateurs ON commandes.utilisateurID = utilisateurs.IDutilisateurs WHERE utilisateurs.Nom = 'Luca';
+
+SELECT utilisateurs.Nom, utilisateurs.Prenom, SUM(commandes.IDCommande)
+FROM commandes
+INNER JOIN utilisateurs ON commandes.utilisateurID = utilisateurs.IDutilisateurs GROUP BY utilisateurs.nom;
+
+SELECT utilisateurs.Nom, utilisateurs.Prenom, COUNT(commandes.utilisateurID) AS nombre_commande
+FROM commandes
+INNER JOIN utilisateurs ON commandes.utilisateurID = utilisateurs.IDutilisateurs GROUP BY utilisateurs.nom;
+

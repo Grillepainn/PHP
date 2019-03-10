@@ -1,0 +1,153 @@
+SELECT * 
+FROM movies;
+
+SELECT title 
+FROM movies;
+
+SELECT title,year_released 
+FROM movies;
+
+SELECT title 
+FROM movies 
+ORDER BY title ASC;
+
+SELECT DISTINCT director 
+FROM movies 
+ORDER BY director;
+
+SELECT title 
+FROM movies 
+WHERE movie_id=5;
+
+SELECT title 
+FROM movies 
+WHERE year_released>2000 AND year_released<2010;
+
+SElECT title 
+FROM movies 
+WHERE year_released<2000 OR year_released>2010;
+
+SELECT title 
+FROM movies 
+WHERE year_released NOT BETWEEN 2000 AND 2010;
+
+SELECT title 
+FROM movies
+WHERE title LIKE 'Le Seigneur Des Anneaux _';
+
+SELECT title 
+FROM movies 
+WHERE director = 'Peter Jackson';
+
+SELECT title 
+FROM movies 
+WHERE director != 'Peter Jackson';
+
+SELECT * 
+FROM movies 
+ORDER BY year_released;
+
+SELECT director, 
+COUNT(title) AS nb_of_movies FROM movies GROUP BY director;
+
+SELECT * 
+FROM movies LIMIT 0,5;
+
+SELECT * 
+FROM movies 
+ORDER BY year_released DESC LIMIT 0,4;
+
+SELECT SUM(views) 
+FROM movies WHERE director ='Peter Jackson';
+UPDATE movies SET views = 100000 WHERE director = 'Peter Jackson';
+
+UPDATE movies, directors
+SET movies.directorID = directors.director_id
+WHERE Concat(directors.first_name, ' ', directors.last_name) = movies.director;
+
+SELECT first_name, YEAR (date_of_birth) 
+FROM directors;
+
+SELECT first_name,last_name
+FROM directors
+WHERE DATE_FORMAT(NOW(), '%Y') - DATE_FORMAT(date_of_birth, '%Y') < 50;
+
+SELECT first_name,last_name
+FROM directors
+WHERE country = 'Amérique';
+
+SELECT views
+FROM movies
+ORDER BY views DESC LIMIT 0,3;
+
+Partie 4 :
+
+SELECT title, year_released, director
+FROM directors
+INNER JOIN movies ON directors.director_id = movies.directorID;
+
+SELECT movies.*, directors.first_name
+FROM directors
+INNER JOIN movies ON directors.director_id = movies.directorID;
+
+SELECT movies.title, directors.first_name
+FROM directors
+INNER JOIN movies ON directors.director_id = movies.directorID ORDER BY title;
+
+SELECT movies.title, directors.first_name
+FROM directors
+INNER JOIN movies ON directors.director_id = movies.directorID ORDER BY first_name;
+
+Partie 5 :
+
+SELECT movies.title, directors.first_name, directors.last_name
+FROM directors
+INNER JOIN movies ON directors.director_id = movies.directorID WHERE Concat(directors.first_name, ' ', directors.last_name) = 'Peter Jackson';
+
+SELECT movies.title, directors.first_name, directors.last_name
+FROM directors
+INNER JOIN movies ON directors.director_id = movies.directorID WHERE Concat(directors.first_name, ' ', directors.last_name) != 'Peter Jackson';
+
+SELECT movies.title, directors.first_name, directors.last_name
+FROM directors
+INNER JOIN movies ON directors.director_id = movies.directorID WHERE Concat(directors.first_name, ' ', directors.last_name) LIKE '%s%';
+
+Partie 6
+
+SELECT movies.title
+FROM directors
+INNER JOIN movies ON directors.director_id = movies.directorID ORDER BY directors.date_of_birth ;
+
+SELECT movies.director, COUNT(title)
+FROM directors
+INNER JOIN movies ON directors.director_id = movies.directorID GROUP BY movies.directorID;
+
+Partie 7 :
+
+SELECT SUM(views)
+FROM directors
+INNER JOIN movies ON directors.director_id = movies.directorID WHERE movies.director = 'Peter Jackson';
+
+SELECT movies.director, SUM(views)
+FROM directors
+INNER JOIN movies ON directors.director_id = movies.directorID GROUP BY movies.director;
+
+SELECT movies.director, AVG(views)
+FROM directors
+INNER JOIN movies ON directors.director_id = movies.directorID GROUP BY movies.director;
+
+(Pas mis des nationnalités mais lieu de naissance, mais fait comme si)
+SELECT directors.country, SUM(views)
+FROM directors
+INNER JOIN movies ON directors.director_id = movies.directorID WHERE directors.country = 'Pekerua';
+
+Partie 8 :
+SELECT movies.director
+FROM directors
+INNER JOIN movies ON directors.director_id = movies.directorID ORDER BY movies.views DESC LIMIT 0,1;
+
+SELECT directors.country
+FROM directors
+INNER JOIN movies ON directors.director_id = movies.directorID WHERE views > 200000;
+
+

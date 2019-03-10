@@ -1,0 +1,163 @@
+//Exercice 1
+  $array = array( "France" => "Paris", "Italy"=>"Rome", "Luxembourg"=>"Luxembourg",
+  "Belgium"=> "Brussels", "Denmark"=>"Copenhagen", "Finland"=>"Helsinki",
+  "Slovakia"=>"Bratislava", "Slovenia"=>"Ljubljana", "Germany" => "Berlin",
+  "Greece" => "Athens", "Ireland"=>"Dublin", "Netherlands"=>"Amsterdam",
+  "Portugal"=>"Lisbon", "Spain"=>"Madrid", "Sweden"=>"Stockholm");
+
+  asort($array);
+  foreach ($array as $pays => $capitale) {
+    echo 'Le pays '.$pays.' � pour capitale '.$capitale.'<br>';
+  }
+
+//Exercice 2
+
+asort($array);
+  foreach ($array as $food => $price) {
+    echo 'Le produit : '.$food.' co�te '.$price.'<br>';
+  }
+
+ksort($array);
+  foreach ($array as $food => $price) {
+    echo 'Le produit : '.$food.' co�te '.$price.'<br>'; "lol"
+  }
+
+arsort($array);
+  foreach ($array as $food => $price) {
+    echo 'Le produit : '.$food.' co�te '.$price.'<br>';
+  }
+
+krsort($array);
+  foreach ($array as $food => $price) {
+    echo 'Le produit : '.$food.' co�te '.$price.'<br>';
+  }
+
+// Exercice 4
+
+$start = 2;
+$tot = 0;
+  for($start; $start <= 20; $start += 2) {
+    echo $start = $tot + $start;
+  }
+
+$i = 0;
+  while ($i <= 20){
+    echo $i;
+    $i += 2;
+  }
+
+//Exercice 5
+$array = array("Marie" => "Adulte", "Stephane" => "Enfant", "Alexandre" => "Adulte",
+"Julie" => "Adolescent", "Sarah" => "Adulte", "Remi" => "Enfant");
+
+foreach ($array as $key => $type) {
+      if ($type === "Enfant") {
+      echo $key.' est un enfant'.'<br>';
+    } if ($type === "Adulte") {
+      echo $key. ' est un adulte'.'<br>';
+    }
+  }
+
+//Exercice 6
+for ($i = 1; $i <= 10; $i++)
+{
+    Echo 'Table de multiplication de '.$i.'<br>';
+    for ($j = 1; $j <= 10; $j++)
+    {
+        echo $i.' x '.$j.' = '.$i*$j.'<br>';
+    }
+}
+
+//Exercice 7
+
+$i = 0;
+
+for($i ; $i <= 5; $i++) {
+  for ($j =1 ; $j <= $i; $j++) {
+    echo '*';
+} echo '<br>';
+}
+
+//Exercice 8
+$i = 0;
+for($i ; $i <= 5; $i++) {
+  for ($j =1 ; $j <= $i; $j++) {
+    echo '*';
+  } echo '<br>';
+}
+
+  $i = 5;
+  for($i ; $i >= 0; $i--) {
+    for ($j = $i ; $j >= 1; $j--) {
+  echo '*';
+  } echo '<br>';
+}
+
+ou autre mani�re de faire
+
+  $i = 5;
+  for($i ; $i >= 0; $i--) {
+    for ($j = 1 ; $j <= $i; $j++) {
+  echo '*';
+  } echo '<br>';
+}
+
+// Exercice 9
+
+$array1 = array(
+      0 => array("Eminem", "IAM"),
+      1 => array("Madonna", "Katy Perry"),
+      2 => array("Pink Floyd", "AC/DC")
+  );
+
+    $array2 = array(
+      0 => "Rap",
+      1 => "Pop",
+      2 => "Rock"
+  );
+
+    $array3 = array();
+    foreach ($array1 as $key => $value) {
+      $array3[$array2[$key]] = $value;
+    }
+
+    echo "<pre>";
+    print_r($array3);
+    echo "</pre>";
+
+ //Exercice 10
+  foreach ($transactions as $key => $value) {
+      $nouveausolde = $value['credit']-$value['debit'];
+      $transactions[$key]=$nouveausolde;
+  }
+
+  echo "<pre>";
+    print_r($transactions);
+    echo "</pre>";
+
+//Exercice 11
+
+foreach ($cities as $key => $value) {
+  $superficie = $value['people']/$value['surface'];
+  $cities[$key]=$superficie;
+}
+
+    echo "<pre>";
+    print_r($cities);
+    echo "</pre>";
+
+//Exercice 12
+
+$array = array(1, 2, 3, 4, 6, 7, 8, 9, 10);
+//Il manque le 5
+$total = 0;
+
+for( $i = 0; $i <= count($array) +1; $i++) {
+  $total = $total + $i;
+}
+
+foreach ($array as $value) {
+  $total -= $value;
+}
+
+echo 'Le chiffre manquant est '.$total;

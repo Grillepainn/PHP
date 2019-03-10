@@ -1,0 +1,39 @@
+-- Exercice P.O.O - Interface & Classes abstraites :
+
+- Partie 1 : 
+Un animal est représenté par un nombre de pates, une couleur de poil, un sexe et un nom.
+Un chien est capable d'aboyer.
+Un chat est capable de miauler.
+
+	-> Créer les classes qui correspondent.
+
+- Partie 2 :
+
+Un être humain est une créature magique qui n'appartiens pas au règne animal mais qui est représenté par un nom, une couleur de cheveux et un sexe.
+
+Un robot est une créature mécanique qui est définit par un identifiant et une couleur.
+
+	-> Créer les classes qui correspondent.
+
+- Partie 3 :
+
+L'être Humain et le robot sont capable de travailler.
+
+	-> Créer l'interface correspondante.
+
+Partie 4 : 
+
+Un être humain est capable de parler.
+
+	-> Modifier votre code pour créer les classes qui correspondent.
+
+
+Partie 5 :
+
+Chaque objet devra être afficher avant de faire son action.
+Exemple : "L'homme Patrick, qui est blond, va travailler."
+
+Créer un script PHP qui va utiliser vos objets et générer de façon aléatoire des chiens/chat/humain/robot :
+
+	- Chien / Chat / Humain doivent produire des sons sur 10 cycles.
+	- Humain / Robot doivent travailler sur 10 cycles.

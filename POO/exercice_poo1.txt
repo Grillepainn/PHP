@@ -1,0 +1,62 @@
+		
+Imaginons un jeu de rôle.
+Il existe plusieurs type de personnages : les Humains les Orques et les Elfes.
+
+Chaque personnage possède :
+	> Un nom
+	> Des points de vie (par défaut 100)
+	> Des points d'attaque (par défaut 10)
+	> Des points de défense (par défaut 5)
+	> Un cri de guerre (par exemple "A l'attaqqquuue !")
+
+Chaque type de personnage possède des caractéristiques particulières :
+	> Les Humains ont un bonus de +1 sur tous type d'arme.
+	> Les Orcs ont +2 en attaque et défense mais -10 de vie.
+	  Ils commencent donc avec 90 PV, 12 Atk et 7 dfs.
+	> Les Elfes ont -3 en défense. Ils commencent donc avec 2 de défense.
+	Les Elfes peuvent fuir n'importe quel combat en sacrifiant 20 point de vie.
+	Quand un Elfe gagne un combat, il gagne 2 de défense et de 2 de vie.
+
+-- Première étape :
+
+Créer une classe Personnage.
+Cette classe implémentera tous les attributs et méthodes communes aux personnages.
+
+Mettre en place les différents type de personnage. Vous devez pouvoir créer des Elfes, des Orques ou des Humains.
+
+-- Deuxième étape :
+
+Les Orques ne sont compris de personne.
+Leur cri de guerre est dorénavant : "mlll wwouogrouroulou !!"
+
+-- Troisième étape :
+
+Il existe plusieurs types d'équipements : Armure, épée, autres (vous pouvez en rajouter autant que vous voulez).
+
+Chaque équipement est désigné par un nom et une description de l'objet.
+Un équipement confère un bonus bien particulier.
+
+Par exemple : une armure peut conférer +5 en défense, une épée +3 en attaque.
+Il y'a même certains objet qui confère +10 en attaque mais baisse de 5 la défense.
+
+Créer une classe Equipement.
+Cette classe implémentera tous les attributs et méthodes communes aux équipements.
+
+Mettre en place les différents type d'équipements. Vous devez pouvoir créer plusieurs équipements.
+(Je vous laisse libre cours à votre imagination pour la création d'arme et de pouvoir spécifique....)
+
+-- Quatrième étape :
+
+Un personnage peut posséder plusieurs équipements mais :
+	- Il ne peut être équipé que de 4 objet au total.
+	- Il ne peut être équipé que de 2 épée a la fois.
+	- Il ne peut porter qu'une seule armure.
+
+Implémenter donc le fait qu'un personnage possède (ou non) un inventaire.
+
+-- Cinquième étape :
+
+Organiser des combats entre vos personnages !!
+Rajouter des méthodes qui permettent de se battre entre vos personnages.
+
+Décomptez les points de vies en fonction des attaques etc...
