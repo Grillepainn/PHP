@@ -1,0 +1,17 @@
+
+Reprenons notre jeu de rôle.
+Nous allons découper le projet en plusieurs petites parties.
+
+Voici la première partie.
+
+--------
+
+Ce jeu est constitué d'aventuriers.
+Chacun de ces aventuriers possèdent : 
+	> Un nom
+	> Des points de vie (par défaut 100)
+	> Des points d'attaque (par défaut 10)
+	> Des points de défense (par défaut 5)
+	> Des points de vitesse (par défaut 3)
+
+Créez la classe correspondante.

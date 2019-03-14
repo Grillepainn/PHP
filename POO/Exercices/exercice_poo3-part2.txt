@@ -1,0 +1,20 @@
+
+Reprenons notre jeu de rôle.
+Nous allons découper le projet en plusieurs petites parties.
+
+Voici la deuxième partie.
+
+--------
+
+Il existe plusieurs types d'équipements : Armure, Epée, Bijou, autres (vous pouvez en rajouter autant que vous voulez).
+
+Chaque équipement est désigné 
+
+
+Exemples : 
+	- Une armure peut conférer +5 en défense mais 0 en attaque et vitesse.
+	- Une épée peut conférer +3 en attaque mais 0 en défense et vitesse.
+	- Une épée peut conférer +10 en attaque mais -5 en défense et 0 de vitesse.
+	- Un collier (bijou) peut conférer +3 de vitesse mais 0 en attaque et défense.
+
+Créez la classe correspondante.

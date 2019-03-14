@@ -1,4 +1,4 @@
-		
+
 Imaginons un jeu de rôle.
 Il existe plusieurs type de personnages : les Humains les Orques et les Elfes.
 
@@ -11,7 +11,7 @@ Chaque personnage possède :
 
 Chaque type de personnage possède des caractéristiques particulières :
 	> Les Humains ont un bonus de +1 sur tous type d'arme.
-	> Les Orcs ont +2 en attaque et défense mais -10 de vie.
+	> Les Orcs ont +2 en attaque et défense mais -10 de vie. 
 	  Ils commencent donc avec 90 PV, 12 Atk et 7 dfs.
 	> Les Elfes ont -3 en défense. Ils commencent donc avec 2 de défense.
 	Les Elfes peuvent fuir n'importe quel combat en sacrifiant 20 point de vie.
@@ -24,12 +24,12 @@ Cette classe implémentera tous les attributs et méthodes communes aux personna
 
 Mettre en place les différents type de personnage. Vous devez pouvoir créer des Elfes, des Orques ou des Humains.
 
--- Deuxième étape :
+-- Deuxième étape : 
 
 Les Orques ne sont compris de personne.
 Leur cri de guerre est dorénavant : "mlll wwouogrouroulou !!"
 
--- Troisième étape :
+-- Troisième étape : 
 
 Il existe plusieurs types d'équipements : Armure, épée, autres (vous pouvez en rajouter autant que vous voulez).
 

@@ -1,0 +1,16 @@
+
+Reprenons notre jeu de rôle.
+Nous allons découper le projet en plusieurs petites parties.
+
+Voici la troisième partie.
+
+--------
+
+Un personnage possède un inventaire.
+Cet inventaire est vide par défaut et il peut être remplis d'équipements.
+
+Un personnage peut donc posséder plusieurs équipements mais :
+	- Il ne peut être équipé que de 4 objet au total.
+	- Il ne peut être équipé que de 2 épée a la fois.
+	- Il ne peut porter qu'une seule armure.
+	- Il ne peut porter qu'un seul bijou.
