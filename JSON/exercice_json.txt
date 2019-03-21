@@ -1,0 +1,9 @@
+Exercice : 
+
+Demander (en console) à l'utilisateur de rentrer un nom et un email.
+
+Créer un objet Utilisateur avec les données rentrées par l'utilisateur.
+
+Sauvegarder votre utilisateur dans un fichier JSON seulement si il n'existe pas déjà :
+	- Si il existe déjà, vous afficher un message 'vous existez, bienvenue'.
+	- Sinon, vous enregistrez votre user et vous affichez un message de succès.

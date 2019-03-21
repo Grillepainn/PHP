@@ -1,0 +1,45 @@
+Un client, libraire, aimerait mettre en place un système informatique pour la vente de ses livres.
+
+-- Partie 1 :
+
+Un auteur est caractérisé par un nom, un sexe et une date de naissance.
+
+Un livre est caractérisé par un titre, une date de publication, un genre, un prix (prix du livre à l'unité) et un auteur.
+Pour simplifier, un livre est écrit par un seul auteur uniquement.
+
+Créez les classes nécessaires permettant de répondre à ce contexte.
+
+-- Partie 2 :
+
+Un livre peut être écrit par plusieurs auteurs.
+
+Modifier une de vos classe pour répondre à ce contexte.
+
+-- Partie 3 :
+
+Nous allons maintenant gérer la partie 'vente'.
+
+Un utilisateur est désigné par un nom, une adresse mail, ...
+
+Une commande est caractérisé par un numéro de commande, une date, un utilisateur et le(s) livre(s) qu'il a commandé.
+
+Créez les classes nécessaires permettant de répondre à ce contexte.
+
+-- Partie 4 (Simuler une vente) :
+
+En ayant crée, en amont, une liste de livre et d'auteurs (à la main), proposez à un utilisateur de passer commande (en console avec la fonction readline).
+Il pourra choisir de commander un ou plusieurs livres.
+Une fois qu'il a passé commande, l'utilisateur reçois un aperçu de sa commande, avec le détail et le prix total.
+
+Il peux passer plusieurs commande.
+
+-- Partie 5 :
+
+Enregistrer toutes les commandes d'un utilisateur en JSON.
+Maintenant, à chaque fois que l'utilisateur arrive dans l'application, il doit d'abord rentrer son nom (ou email) pour pouvoir l'identifier.
+Ensuite, il à 2 possibilités :
+	1 - Consulter ses commandes précédentes.
+	2 - Passer une commande.
+
+Lorsque l'utilisateur passe commande, celle-ci s'enregistre maintenant avec les autres commandes.
+Vous devez pouvoir distinguer les commandes de l'utilisateur A et les commandes de l'utilisateur B.

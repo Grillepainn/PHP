@@ -1,0 +1,14 @@
+{
+  "nom" : "spielberg",
+  "age" : 72,
+  "films" : [
+    {
+      "titre" : "ready player one",
+      "date_sortie" : "2018"
+    },
+    {
+      "titre" : "jurassic world",
+      "date_sortie" : "2018"
+    }
+  ]
+}

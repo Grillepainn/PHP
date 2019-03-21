@@ -1,0 +1,31 @@
+-- Exercice liste chainée
+
+Imaginons une liste chainée.
+Cette liste est composée de plusieurs 'maillon'.
+
+Voici les différentes contraintes de ces maillons : 
+
+	- Chaque maillon contient un élément de la liste.
+	- Chaque maillon contient une référence vers le maillon suivant sauf le dernière maillon de la liste.
+	- On doit pouvoir consulter la valeur d'un maillon (ou d'un élément).
+	- On doit pouvoir modifier cette valeur.
+	- On doit pouvoir accéder à l'élément suivant depuis un maillon.
+	- On doit pouvoir modifier l'élément suivant.
+
+
+Voici les différentes contraintes de la liste en elle même :
+	
+	- On doit pouvoir accéder au premier élément de la liste.
+	- On doit pouvoir accéder au dernier élément de la liste.
+	- On doit savoir si une liste est vide ou non.
+	- On doit connaitre le nombre de maillons (ou longueur) de la liste.
+	- On doit pouvoir insérer un élément en début de liste.
+	- On doit pouvoir insérer un élément en fin de liste.
+	- On doit pouvoir supprimé un élément en fonction d'une valeur.
+	On supprimera, par défaut, la première occurence de cette valeur dans la liste.
+	- On doit pouvoir afficher la concaténation de tous les éléments de la liste sous forme de String.
+
+
+=> Créer un programme (et les classes correspondantes) qui répondent à toutes ces contraintes.
+
+Indice : Vous pouvez utiliser deux (2) classes. Une pour représenter les maillons, une autre pour représenter la liste en elle-même.
